@@ -1,5 +1,6 @@
 import { Module } from "@nestjs/common";
 import { ArchiveDb } from "./archive-db";
+import { AuditService } from "./audit.service";
 import { CustomersService } from "./customers.service";
 import { DynamicService } from "./dynamic.service";
 import { InvoicesController } from "./invoices.controller";
@@ -14,6 +15,7 @@ import { ReportsService } from "./reports.service";
   controllers: [InvoicesController],
   providers: [
     LedgerDb,
+    AuditService,
     ArchiveDb,
     InvoicesService,
     PaymentsService,
