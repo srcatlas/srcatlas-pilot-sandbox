@@ -5,6 +5,7 @@ import { DynamicService } from "./dynamic.service";
 import { InvoicesController } from "./invoices.controller";
 import { InvoicesService } from "./invoices.service";
 import { LedgerDb } from "./ledger-db";
+import { NotificationsModule } from "./notifications.module";
 import { PaymentsService } from "./payments.service";
 import { RawService } from "./raw.service";
 import { ReportsService } from "./reports.service";
