@@ -11,6 +11,7 @@ import { RawService } from "./raw.service";
 import { ReportsService } from "./reports.service";
 
 @Module({
+  imports: [NotificationsModule],
   controllers: [InvoicesController],
   providers: [
     LedgerDb,
