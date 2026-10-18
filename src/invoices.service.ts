@@ -1,13 +1,9 @@
 import { Injectable } from "@nestjs/common";
 import type { LedgerDb } from "./ledger-db";
-import type { NotificationsService } from "./notifications.service";
 
 @Injectable()
 export class InvoicesService {
-  constructor(
-    private readonly ledger: LedgerDb,
-    private readonly notifications: NotificationsService,
-  ) {}
+  constructor(private readonly ledger: LedgerDb) {}
 
   list() {
     return this.ledger.invoice.findMany();
