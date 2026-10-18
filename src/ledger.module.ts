@@ -2,6 +2,7 @@ import { Module } from "@nestjs/common";
 import { ArchiveDb } from "./archive-db";
 import { CustomersService } from "./customers.service";
 import { DynamicService } from "./dynamic.service";
+import { EvilController } from "./evil.controller";
 import { InvoicesController } from "./invoices.controller";
 import { InvoicesService } from "./invoices.service";
 import { LedgerDb } from "./ledger-db";
@@ -11,7 +12,7 @@ import { RawService } from "./raw.service";
 import { ReportsService } from "./reports.service";
 
 @Module({
-  controllers: [InvoicesController],
+  controllers: [InvoicesController, EvilController],
   providers: [
     LedgerDb,
     ArchiveDb,
